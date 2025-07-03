@@ -1,0 +1,18 @@
+package(default_visibility = ["//visibility:public"])
+
+cc_import(
+    name = "glfw",
+    hdrs = glob(["include/GLFW/*.h"]),
+    includes = ["include"],
+    static_library = "lib/libglfw3.a",
+    linkopts = [
+        "-lGL", #OpenGL Functions
+        "-lX11",     # X11 windowing
+        "-lm",       # math (fabs, etc.)
+        "-lpthread", # threading
+        "-lrt",      # realtime
+        "-ldl",      # dynamic loader
+    ],
+    
+    alwayslink = True,
+)

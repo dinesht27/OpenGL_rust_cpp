@@ -1,0 +1,12 @@
+cc_binary(
+    name = "opengl",
+    srcs = [
+        "main.cpp",
+    ],
+    deps = [
+        "//dependencies/glfw:glfw",
+    ],
+    includes = [
+        "../dependencies/glfw/include",
+    ],
+)
