@@ -10,3 +10,13 @@ cc_binary(
         "../dependencies/glfw/include",
     ],
 )
+
+rust_binary(
+    name       = "opengl_rust",
+    srcs       = ["main.rs"],
+    edition    = "2021",
+    deps       = [
+        "//dependencies/glfw:glfw",
+    ],
+    visibility = ["//visibility:public"],
+)
